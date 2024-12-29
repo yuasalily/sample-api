@@ -21,7 +21,7 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 # ビルド済みバイナリをコピー
-COPY --from=builder /app/mock-server .
+COPY --from=builder /app/main .
 
 # ポートを公開
 EXPOSE 8080
