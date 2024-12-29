@@ -1,5 +1,5 @@
 # ベースイメージ
-FROM golang:1.22 as builder
+FROM golang:1.23 as builder
 
 # 作業ディレクトリを作成
 WORKDIR /app
