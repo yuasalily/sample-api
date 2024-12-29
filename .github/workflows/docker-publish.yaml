@@ -8,8 +8,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-  steps:
-  - name: 'test'
-    run: |
-      readonly AAAA=1111
-      echo ${AAAA}
+    steps:
+    - name: 'test'
+      run: |
+        readonly AAAA=1111
+        echo ${AAAA}
