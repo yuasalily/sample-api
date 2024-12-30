@@ -30,6 +30,9 @@ jobs:
       uses: docker/metadata-action@v4
       with:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+        # latestタグも追加
+        flavor: |
+          latest=${{ github.ref == 'refs/heads/main' }}
     - name: 'Build and push Docker image'
       id: push
       uses: docker/build-push-action@v5
